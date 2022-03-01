@@ -39,11 +39,22 @@ public class PlayerController : MonoBehaviour
     private void Win()
     {
         Move = false;
+
+        Debug.Log("Bura çalýþýyor mudur acabasýýýý");
     }
 
     private void Lose()
     {
         Move = false;
+    }
+
+    public void OnTriggerEnter(Collider other)
+    {
+        if(other.gameObject.CompareTag("EndTrigger"))
+        {
+            Win();
+            GameManager.OnGameWin?.Invoke();
+        }
     }
     private void OnEnable()
     {

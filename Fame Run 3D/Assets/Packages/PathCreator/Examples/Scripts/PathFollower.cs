@@ -7,10 +7,11 @@ namespace PathCreation.Examples
     public class PathFollower : MonoBehaviour
     {
         public PathCreator pathCreator;
+        private GameObject pathObjectFind;
         public EndOfPathInstruction endOfPathInstruction;
         public float speed = 15;
         float distanceTravelled;
-        private bool anotherMove = false;
+        public bool isMoving = false;
 
         void Start()
         {
@@ -19,14 +20,21 @@ namespace PathCreation.Examples
                 // Subscribed to the pathUpdated event so that we're notified if the path changes during the game
                 pathCreator.pathUpdated += OnPathChanged;
             }
+            else
+            {
+                pathObjectFind = GameObject.FindGameObjectWithTag("Level").gameObject.transform.GetChild(0).gameObject;
+                pathCreator = pathObjectFind.GetComponent<PathCreator>();
+            }
         }
 
         void Update()
         {
-            if(anotherMove)
+            
+            if(isMoving)
             {
                 FollowThePath();
             }
+            
         }
 
         void FollowThePath()
@@ -41,19 +49,23 @@ namespace PathCreation.Examples
 
         void StartBooleans()
         {
-            anotherMove = true;
+            isMoving = true;
+        }
+        void EndBooleans()
+        {
+            isMoving = false;
         }
         private void OnEnable()
         {
-            GameManager.OnGameStart += StartBooleans;
-           // GameManager.OnGameWin += ;
+            GameManager.OnGameStart +=  StartBooleans;
+            GameManager.OnGameWin += EndBooleans;
            // GameManager.OnGameLose += ;
         }
 
         private void OnDisable()
         {
             GameManager.OnGameStart -= StartBooleans;
-            // GameManager.OnGameWin -= Win;
+            GameManager.OnGameWin -= EndBooleans;
             //GameManager.OnGameLose -= Lose;
         }
 

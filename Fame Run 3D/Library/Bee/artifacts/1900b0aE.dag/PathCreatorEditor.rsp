@@ -336,8 +336,6 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.TestRunner.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Packages/Plugins/Demigiant/DOTween/DOTween.dll"
--analyzer:"Assets/Packages/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 "Assets/Packages/PathCreator/Core/Editor/Helper/MouseUtility.cs"
 "Assets/Packages/PathCreator/Core/Editor/Helper/PathHandle.cs"
 "Assets/Packages/PathCreator/Core/Editor/Helper/ScreenSpacePolyLine.cs"

@@ -334,8 +334,6 @@
 -r:"C:/Users/hande/OneDrive/Desktop/Unity Projects/Fame-Run-3D-Game/Fame Run 3D/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
--analyzer:"Assets/Packages/Plugins/Demigiant/DOTween/DOTween.dll"
--analyzer:"Assets/Packages/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 "Library/PackageCache/com.unity.timeline@1.6.3/Runtime/Activation/ActivationMixerPlayable.cs"
 "Library/PackageCache/com.unity.timeline@1.6.3/Runtime/Activation/ActivationPlayableAsset.cs"
 "Library/PackageCache/com.unity.timeline@1.6.3/Runtime/Activation/ActivationTrack.cs"

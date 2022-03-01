@@ -22,6 +22,7 @@ public class UIManager : Singleton<UIManager>
 
     private void OnWin()
     {
+        mainPanel.SetActive(false);
         if (panelLose.activeSelf == false)
         {
             panelWin.SetActive(true);
@@ -30,6 +31,8 @@ public class UIManager : Singleton<UIManager>
 
     private void OnLose()
     {
+
+        mainPanel.SetActive(false);
         if (panelWin.activeSelf == false)
         {
             panelLose.SetActive(true);

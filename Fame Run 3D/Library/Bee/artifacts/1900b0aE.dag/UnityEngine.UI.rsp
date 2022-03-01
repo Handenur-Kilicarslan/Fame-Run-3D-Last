@@ -336,8 +336,6 @@
 -r:"C:/Users/hande/OneDrive/Desktop/Unity Projects/Fame-Run-3D-Game/Fame Run 3D/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll"
 -r:"C:/Users/hande/OneDrive/Desktop/Unity Projects/Fame-Run-3D-Game/Fame Run 3D/Library/PackageCache/com.unity.collab-proxy@1.15.7/Lib/Editor/PlasticSCM/unityplastic.dll"
 -r:"C:/Users/hande/OneDrive/Desktop/Unity Projects/Fame-Run-3D-Game/Fame Run 3D/Library/PackageCache/com.unity.nuget.newtonsoft-json@2.0.0/Runtime/Newtonsoft.Json.dll"
--analyzer:"Assets/Packages/Plugins/Demigiant/DOTween/DOTween.dll"
--analyzer:"Assets/Packages/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 "Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/AxisEventData.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/BaseEventData.cs"
 "Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs"
