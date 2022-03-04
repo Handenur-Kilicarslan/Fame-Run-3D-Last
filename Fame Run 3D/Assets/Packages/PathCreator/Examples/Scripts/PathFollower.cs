@@ -29,7 +29,6 @@ namespace PathCreation.Examples
 
         void Update()
         {
-            
             if(isMoving)
             {
                 FollowThePath();

@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class PlayerAnimController : MonoBehaviour
 {
-    private Animator playerAnimation;
+    public Animator playerAnimation;
     // Start is called before the first frame update
+    
     void Start()
     {
         playerAnimation = GetComponent<Animator>();
@@ -19,7 +20,12 @@ public class PlayerAnimController : MonoBehaviour
 
     void IdleToStart()
     {
-       playerAnimation.SetBool("IdleToStart", true);
+        if (playerAnimation == null)
+        {
+            playerAnimation = GetComponent<Animator>();
+        }
+
+        playerAnimation.SetBool("IdleToStart", true);
     }
 
     private void OnEnable()
@@ -31,7 +37,7 @@ public class PlayerAnimController : MonoBehaviour
 
     private void OnDisable()
     {
-        //GameManager.OnGameStart -= CharacterMove;
+        GameManager.OnGameStart -= IdleToStart;
        // GameManager.OnGameWin -= Win;
         //GameManager.OnGameLose -= Lose;
     }

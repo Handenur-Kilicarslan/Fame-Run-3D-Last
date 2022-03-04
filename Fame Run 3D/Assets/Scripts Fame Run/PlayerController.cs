@@ -52,10 +52,28 @@ public class PlayerController : MonoBehaviour
     {
         if(other.gameObject.CompareTag("EndTrigger"))
         {
+            Debug.Log("End Trigger'a çarptýk GameWin i uyandýr");
+
+            GameManager.OnGameWin?.Invoke(); 
             Win();
-            GameManager.OnGameWin?.Invoke();
+        }
+
+        if(other.TryGetComponent(out Collectable collectable))
+        {
+            Debug.Log("Ruj topladýk");
+            Destroy(other.gameObject);
+            UIManager.Instance.UpdateScore(collectable.famePoint);
+        }
+
+        if(other.TryGetComponent(out DoorInfo door))
+        {
+            Debug.Log("This is door");
+            UIManager.Instance.UpdateScore(door.doorFamePoint);
+            transform.Rotate(Vector3.up * 50 * Time.deltaTime, Space.Self);
+            //rotate it
         }
     }
+
     private void OnEnable()
     {
         GameManager.OnGameStart += CharacterMove;

@@ -8,12 +8,13 @@ public class GameManager : Singleton<GameManager>
     public static Action OnGameStart;
     public static Action OnGameWin;
     public static Action OnGameLose;
-   public void StartGame()
-   {
-        OnGameStart?.Invoke();
-   }
-    public void WinGame()
+
+
+    public void StartGame()
     {
-        OnGameWin?.Invoke();
+        Debug.Log("On game start çalýþtý");
+        OnGameStart?.Invoke();
     }
+
+
 }

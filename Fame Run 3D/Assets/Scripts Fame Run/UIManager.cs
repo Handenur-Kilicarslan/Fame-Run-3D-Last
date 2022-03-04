@@ -13,6 +13,7 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private GameObject panelWin;
 
     [SerializeField] private GameObject ActiveScore;
+    private int totalScore;
 
     private void OnStart()
     {
@@ -23,6 +24,7 @@ public class UIManager : Singleton<UIManager>
     private void OnWin()
     {
         mainPanel.SetActive(false);
+
         if (panelLose.activeSelf == false)
         {
             panelWin.SetActive(true);
@@ -33,6 +35,7 @@ public class UIManager : Singleton<UIManager>
     {
 
         mainPanel.SetActive(false);
+
         if (panelWin.activeSelf == false)
         {
             panelLose.SetActive(true);
@@ -41,7 +44,8 @@ public class UIManager : Singleton<UIManager>
 
     public void UpdateScore(int addingScore)
     {
-        ActiveScore.GetComponent<Text>().text = "" + addingScore;
+        totalScore += addingScore;
+        ActiveScore.GetComponent<Text>().text = "" + totalScore.ToString();
     }
 
     private void OnEnable()

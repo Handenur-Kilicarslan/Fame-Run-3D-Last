@@ -8,6 +8,7 @@ public class LevelManager : Singleton<LevelManager>
 {
     [Header("Level System")]
     private int whichlevel = 0;
+    private int levelTextInt;
     public Text levelText;
     public bool gameStarted = false;
 
@@ -24,6 +25,8 @@ public class LevelManager : Singleton<LevelManager>
 
     private void Initialize()
     {
+        //PlayerPrefs.GetInt("levelTextInt");
+
         whichlevel = PlayerPrefs.GetInt("whichlevel");
 
         if (PlayerPrefs.GetInt("randomlevel") > 0)
@@ -31,8 +34,10 @@ public class LevelManager : Singleton<LevelManager>
             whichlevel = Random.Range(0, levels.Count);
         }
 
-        //level[whichlevel].SetActive(true);
+
         Instantiate(levels[whichlevel].LevelPrefab, Vector3.zero, Quaternion.identity);
+
+        //level[whichlevel].SetActive(true);
         //MainPlayer = Instantiate(levels[whichlevel].Player, Vector3.zero, Quaternion.identity);
 
         levelText.text = "Level " + (whichlevel + 1);
