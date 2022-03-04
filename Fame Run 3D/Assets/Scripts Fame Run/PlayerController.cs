@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using DG.Tweening;
+using ElephantSDK;
 
 public class PlayerController : MonoBehaviour
 {
@@ -54,7 +55,8 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("End Trigger'a çarptýk GameWin i uyandýr");
 
-            GameManager.OnGameWin?.Invoke(); 
+            Elephant.LevelCompleted(LevelManager.Instance.whichlevel);
+            GameManager.OnGameWin?.Invoke();
             Win();
         }
 

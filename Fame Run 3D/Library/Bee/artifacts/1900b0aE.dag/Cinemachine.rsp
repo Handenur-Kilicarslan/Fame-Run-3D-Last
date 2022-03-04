@@ -121,6 +121,16 @@
 -define:CINEMACHINE_UNITY_IMGUI
 -define:CSHARP_7_OR_LATER
 -define:CSHARP_7_3_OR_NEWER
+-r:"Assets/ExternalDependencyManager/Editor/1.2.167/Google.IOSResolver.dll"
+-r:"Assets/ExternalDependencyManager/Editor/1.2.167/Google.JarResolver.dll"
+-r:"Assets/ExternalDependencyManager/Editor/1.2.167/Google.PackageManagerResolver.dll"
+-r:"Assets/ExternalDependencyManager/Editor/1.2.167/Google.VersionHandlerImpl.dll"
+-r:"Assets/ExternalDependencyManager/Editor/Google.VersionHandler.dll"
+-r:"Assets/FacebookSDK/Plugins/Editor/Facebook.Unity.Editor.dll"
+-r:"Assets/FacebookSDK/Plugins/Facebook.Unity.dll"
+-r:"Assets/FacebookSDK/Plugins/Gameroom/Facebook.Unity.Gameroom.dll"
+-r:"Assets/FacebookSDK/Plugins/Gameroom/FacebookNamedPipeClient.dll"
+-r:"Assets/FacebookSDK/Plugins/Settings/Facebook.Unity.Settings.dll"
 -r:"Assets/Packages/Plugins/Demigiant/DOTween/DOTween.dll"
 -r:"Assets/Packages/Plugins/Demigiant/DOTween/Editor/DOTweenEditor.dll"
 -r:"C:/Program Files/Unity/Hub/Editor/2021.2.9f1/Editor/Data/Managed/UnityEditor.Graphs.dll"

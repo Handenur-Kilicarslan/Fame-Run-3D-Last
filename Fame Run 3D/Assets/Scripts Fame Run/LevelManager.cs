@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using ElephantSDK;
 
 public class LevelManager : Singleton<LevelManager>
 {
     [Header("Level System")]
-    private int whichlevel = 0;
+    public int whichlevel = 0;
     private int levelTextInt;
     public Text levelText;
     public bool gameStarted = false;
@@ -27,7 +28,10 @@ public class LevelManager : Singleton<LevelManager>
     {
         //PlayerPrefs.GetInt("levelTextInt");
 
+
         whichlevel = PlayerPrefs.GetInt("whichlevel");
+
+        Elephant.LevelStarted(whichlevel);
 
         if (PlayerPrefs.GetInt("randomlevel") > 0)
         {
@@ -45,6 +49,7 @@ public class LevelManager : Singleton<LevelManager>
 
     public void NextLevel()
     {
+
         whichlevel++;
         PlayerPrefs.SetInt("whichlevel", whichlevel);
 
@@ -53,6 +58,8 @@ public class LevelManager : Singleton<LevelManager>
             whichlevel--;
             PlayerPrefs.SetInt("randomlevel", 1);
         }
+
+
 
         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
     }
